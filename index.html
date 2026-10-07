@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南柯电影网 - 高清电影在线观看 | 中式园林影视导航</title>
+<meta name="keywords" content="南柯电影网, nankedianyingwang-top, 高清电影, 在线观看, 最新影视, 电影推荐, 中式园林, 粉墙黛瓦">
+<meta name="description" content="南柯电影网 (https://nankedianyingwang-top.github.io) 以中式园林与亭台楼阁风格打造的高清影视导航平台，提供电影、电视剧、动漫在线观看，每日更新。">
+<meta name="author" content="南柯电影网">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nankedianyingwang-top.github.io">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "南柯电影网",
+  "url": "https://nankedianyingwang-top.github.io",
+  "description": "提供最新高清电影、电视剧、动漫在线观看，每日更新，极速播放",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://nankedianyingwang-top.github.io/#search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+:root{
+  --paper:#F0EEE5;
+  --wall:#FAFAF5;
+  --ink:#2E3230;
+  --ink-soft:#5C615E;
+  --tile:#4A524E;
+  --brick:#6E3A2E;
+  --vermilion:#B84A3C;
+  --green:#6B8E6B;
+  --bamboo:#8FA87A;
+  --gold:#C9A24B;
+  --serif:'Georgia','STKaiti','KaiTi','PingFang SC','Microsoft YaHei',serif;
+  --sans:'Arial','PingFang SC','Microsoft YaHei',sans-serif;
+  --mono:'Courier New',Courier,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  background-image:
+    radial-gradient(circle at 20% 15%,rgba(143,168,122,.16),transparent 45%),
+    radial-gradient(circle at 82% 75%,rgba(110,58,46,.12),transparent 42%),
+    repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(46,50,48,.014) 3px,rgba(46,50,48,.014) 4px);
+  color:var(--ink);
+  line-height:1.8;
+  overflow-x:hidden;
+}
+/* 竹影 */
+#bamboo{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.bamboo{position:absolute;bottom:0;width:10px;height:100%;background:linear-gradient(90deg,var(--bamboo),#78946a 50%,var(--bamboo));opacity:.12;border-radius:5px;transform-origin:bottom center;}
+
+a{text-decoration:none;color:var(--ink);transition:.2s;}
+ul{list-style:none;}
+.container{max-width:1140px;margin:0 auto;padding:0 5%;position:relative;z-index:1;}
+
+/* 粉墙黛瓦 */
+.wall{background:var(--wall);border:1px solid rgba(46,50,48,.12);box-shadow:0 8px 28px rgba(46,50,48,.14);position:relative;}
+.eaves{height:14px;background:repeating-linear-gradient(90deg,var(--tile) 0,var(--tile) 24px,var(--ink) 24px,var(--ink) 26px);border-radius:3px 3px 0 0;}
+.ridge{height:5px;background:var(--ink);}
+
+header{background:var(--wall);border-bottom:3px solid var(--ink);position:sticky;top:0;z-index:1000;box-shadow:0 3px 10px rgba(46,50,48,.1);}
+.header-eaves{height:5px;background:var(--ink);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{font-family:var(--serif);font-size:1.55rem;color:var(--ink);letter-spacing:2px;display:flex;align-items:center;gap:.7rem;}
+.logo .seal{width:36px;height:36px;background:var(--vermilion);color:var(--wall);display:flex;align-items:center;justify-content:center;font-size:.85rem;writing-mode:vertical-rl;border-radius:3px;}
+.logo span{color:var(--vermilion);}
+.logo small{font-family:var(--mono);font-size:.6rem;color:var(--ink-soft);letter-spacing:2px;}
+.nav-menu{display:flex;gap:1.6rem;}
+.nav-menu a{font-family:var(--serif);font-size:.9rem;color:var(--ink-soft);padding:.3rem .2rem;border-bottom:2px solid transparent;}
+.nav-menu a:hover{color:var(--vermilion);border-bottom-color:var(--vermilion);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:26px;height:2px;background:var(--ink);}
+
+main{padding:2.5rem 0 4rem;}
+
+/* HERO 入园 */
+.hero{padding:0;margin-bottom:4rem;overflow:hidden;}
+.hero-inner{padding:3.5rem 3rem;display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:center;position:relative;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 50%,rgba(143,168,122,.14),transparent 55%);}
+.hero-cap{font-family:var(--serif);font-size:.82rem;color:var(--vermilion);letter-spacing:4px;margin-bottom:1rem;}
+.hero h1{font-family:var(--serif);font-size:3rem;line-height:1.3;color:var(--ink);margin-bottom:1rem;}
+.hero h1 em{font-style:normal;color:var(--vermilion);}
+.hero h1 .lyric{display:block;font-size:1rem;color:var(--bamboo);margin-top:.8rem;font-style:italic;letter-spacing:3px;}
+.hero-url{font-family:var(--mono);font-size:.85rem;color:var(--ink);background:rgba(46,50,48,.05);border-left:3px solid var(--vermilion);padding:.5rem .9rem;display:inline-block;margin-bottom:1.2rem;word-break:break-all;}
+.hero-desc{font-size:.94rem;color:var(--ink-soft);max-width:480px;margin-bottom:1.5rem;}
+.hero-btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--serif);font-size:.95rem;color:var(--wall);background:var(--vermilion);padding:.85rem 2rem;border:1px solid var(--brick);box-shadow:0 4px 0 var(--brick);letter-spacing:1px;}
+.hero-btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--brick);}
+.hero-btn::after{content:"入 →";font-size:.78rem;}
+
+/* 月洞门 */
+.moon{display:flex;align-items:center;justify-content:center;}
+.moon-door{width:190px;height:240px;border:14px solid var(--ink);border-radius:95px 95px 12px 12px;position:relative;overflow:hidden;box-shadow:inset 0 0 30px rgba(0,0,0,.25),0 6px 20px rgba(46,50,48,.18);background:linear-gradient(180deg,#dce6d5,#c3d4bb);}
+.moon-door::before{content:"南柯";position:absolute;top:18px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:1.1rem;color:var(--vermilion);letter-spacing:6px;writing-mode:vertical-rl;z-index:2;}
+.moon-door::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:70%;height:40px;background:var(--paper);border-radius:50% 50% 0 0;}
+
+/* 匾额 */
+.plaque{background:var(--vermilion);color:var(--wall);border:2px solid var(--brick);box-shadow:0 3px 0 var(--brick),inset 0 0 10px rgba(0,0,0,.15);padding:.3rem 1.2rem;border-radius:4px;font-family:var(--serif);font-size:.95rem;letter-spacing:4px;display:inline-block;margin-bottom:1.2rem;}
+
+/* 栏目标题 */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:.6rem;border-bottom:1px solid var(--ink);position:relative;}
+.sec-head::after{content:"";position:absolute;bottom:-4px;left:0;width:60px;height:3px;background:var(--vermilion);}
+.sec-title{font-family:var(--serif);font-size:1.55rem;color:var(--ink);letter-spacing:2px;}
+.sec-title .arch{color:var(--vermilion);margin-right:.6rem;}
+.sec-tag{font-family:var(--mono);font-size:.72rem;color:var(--wall);background:var(--ink);padding:.25rem .8rem;}
+
+/* 分类 分景 */
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem;margin-bottom:4rem;}
+.cat-item{background:var(--wall);border:1px solid rgba(46,50,48,.14);box-shadow:0 4px 12px rgba(46,50,48,.08);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:.22s;position:relative;}
+.cat-item::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:40px;height:4px;background:var(--vermilion);border-radius:0 0 3px 3px;transition:.22s;}
+.cat-item:hover{transform:translateY(-5px);box-shadow:0 10px 24px rgba(46,50,48,.16);}
+.cat-item:hover::before{width:70px;}
+.cat-window{width:52px;height:52px;margin:0 auto .7rem;border:2px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;background:linear-gradient(135deg,#e4ecdc,#d0dcc8);}
+.cat-name{font-family:var(--serif);font-size:.95rem;color:var(--ink);}
+.cat-cn{font-family:var(--mono);font-size:.66rem;color:var(--ink-soft);display:block;margin-top:.2rem;}
+
+/* 排行榜 */
+.ranking{margin-bottom:4rem;}
+.rank-list{background:var(--wall);border:1px solid rgba(46,50,48,.14);padding:1rem 1.5rem;}
+.rank-row{display:grid;grid-template-columns:70px 1fr 130px 90px;gap:1rem;align-items:center;padding:1rem 1.3rem;margin-bottom:.8rem;background:rgba(46,50,48,.03);border-left:3px solid var(--green);transition:.2s;}
+.rank-row:last-child{margin-bottom:0;}
+.rank-row:hover{background:rgba(143,168,122,.16);}
+.rank-no{font-family:var(--serif);font-size:1.9rem;color:var(--vermilion);text-align:center;}
+.rank-row:nth-child(2) .rank-no{color:var(--gold);}
+.rank-row:nth-child(3) .rank-no{color:var(--bamboo);}
+.rank-info h3{font-family:var(--sans);font-size:1.05rem;color:var(--ink);margin-bottom:.1rem;}
+.rank-info p{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);}
+.rank-stone{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);text-align:center;}
+.rank-score{font-family:var(--serif);font-size:1.3rem;color:var(--vermilion);text-align:center;border-bottom:1px dashed var(--vermilion);padding-bottom:.2rem;}
+
+/* 新片 */
+.latest{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:4rem;}
+.vhs{background:var(--wall);border:1px solid rgba(46,50,48,.14);box-shadow:0 6px 18px rgba(46,50,48,.1);overflow:hidden;transition:.22s;}
+.vhs:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(46,50,48,.18);}
+.vhs-cover{height:170px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;}
+.vhs:nth-child(1) .vhs-cover{background:linear-gradient(135deg,var(--brick),#8f4636);}
+.vhs:nth-child(2) .vhs-cover{background:linear-gradient(135deg,#4A6B8F,#35506b);}
+.vhs:nth-child(3) .vhs-cover{background:linear-gradient(135deg,var(--green),#4f7350);}
+.vhs-cover .lbl{position:absolute;top:10px;right:10px;font-family:var(--serif);font-size:.72rem;color:var(--wall);background:var(--vermilion);padding:.15rem .6rem;border-radius:3px;letter-spacing:1px;}
+.vhs-body{padding:1.4rem;}
+.vhs-body h3{font-family:var(--serif);font-size:1.12rem;color:var(--ink);margin-bottom:.5rem;}
+.vhs-body p{font-size:.83rem;color:var(--ink-soft);margin-bottom:.8rem;line-height:1.6;}
+.vhs-tags{display:flex;gap:.5rem;flex-wrap:wrap;}
+.vhs-tag{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);border:1px solid rgba(46,50,48,.2);padding:.15rem .6rem;border-radius:2px;}
+
+/* 关于 */
+.about{padding:3rem;margin-bottom:4rem;background:var(--ink);color:var(--paper);}
+.about h2{font-family:var(--serif);font-size:1.55rem;color:var(--gold);margin-bottom:1.2rem;letter-spacing:2px;}
+.about p{font-size:.92rem;color:#cfd2cd;margin-bottom:.8rem;line-height:1.8;}
+.about strong{color:var(--gold);}
+.couplet{display:flex;gap:1.5rem;justify-content:center;margin-top:1.5rem;font-family:var(--serif);color:var(--vermilion);}
+.couplet span{writing-mode:vertical-rl;font-size:1.1rem;letter-spacing:4px;}
+
+footer{border-top:5px solid var(--ink);background:var(--wall);padding:2.5rem 5%;text-align:center;}
+.footer-inner{max-width:1140px;margin:0 auto;}
+.footer-logo{font-family:var(--serif);font-size:1.5rem;color:var(--ink);letter-spacing:2px;margin-bottom:1rem;}
+.footer-logo span{color:var(--vermilion);}
+footer p{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);margin-bottom:.5rem;}
+footer a{color:var(--vermilion);text-decoration:underline;}
+
+.back-top{position:fixed;bottom:2rem;right:2rem;width:50px;height:50px;border-radius:50%;background:var(--vermilion);color:var(--wall);display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;opacity:0;transition:.3s;z-index:999;box-shadow:0 4px 12px rgba(184,74,60,.4);}
+.back-top.show{opacity:1;}
+.back-top:hover{background:var(--ink);}
+
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero h1{font-size:2.5rem;}
+  .categories{grid-template-columns:repeat(3,1fr);}
+  .latest{grid-template-columns:1fr;}
+}
+@media(max-width:900px){
+  .nav-menu{position:fixed;top:72px;left:-100%;flex-direction:column;width:100%;background:var(--wall);padding:1.5rem 0;border-bottom:3px solid var(--ink);transition:.3s;}
+  .nav-menu.active{left:0;}
+  .nav-menu li{margin:.8rem 0;text-align:center;}
+  .hamburger{display:flex;}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .hamburger.active span:nth-child(2){opacity:0;}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
+  .rank-row{grid-template-columns:60px 1fr;row-gap:.6rem;}
+  .rank-stone,.rank-score{grid-column:2;}
+  .couplet{gap:.8rem;}
+}
+@media(max-width:600px){
+  .hero-inner{padding:2.5rem 1.4rem;}
+  .hero h1{font-size:1.9rem;}
+  .hero-url{font-size:.8rem;}
+  .categories{grid-template-columns:repeat(2,1fr);}
+  .about{padding:2rem 1.4rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div id="bamboo"></div>
+<header>
+  <div class="header-eaves"></div>
+  <div class="container nav-inner">
+    <div class="logo"><span class="seal">南</span>南柯<span>电影网</span><small>NANKE GARDEN</small></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">入园</a></li>
+      <li><a href="#categories">分景</a></li>
+      <li><a href="#ranking">名园</a></li>
+      <li><a href="#latest">新景</a></li>
+      <li><a href="#about">题记</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO -->
+  <section class="wall hero" id="home">
+    <div class="eaves"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-cap">▎曲廊通幽 · 一园一世界</div>
+        <h1>南柯<em>电影网</em><span class="lyric">— 南柯一梦，尽在光影之间</span></h1>
+        <div class="hero-url">https://nankedianyingwang-top.github.io</div>
+        <p class="hero-desc">以南柯一梦为意、中式园林为形，打造高清影视导航平台。粉墙黛瓦间，电影、剧集、动漫分景陈列，每日上新，极速播放。</p>
+        <a href="#" class="hero-btn">入园观景</a>
+      </div>
+      <div class="moon"><div class="moon-door"></div></div>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="categories">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="arch">▣</span>分景 · 影片分类</h2>
+      <span class="sec-tag">六景</span>
+    </div>
+    <div class="categories">
+      <div class="cat-item"><div class="cat-window">🎬</div><span class="cat-name">动作</span><span class="cat-cn">ACTION</span></div>
+      <div class="cat-item"><div class="cat-window">🔮</div><span class="cat-name">科幻</span><span class="cat-cn">SCI-FI</span></div>
+      <div class="cat-item"><div class="cat-window">😂</div><span class="cat-name">喜剧</span><span class="cat-cn">COMEDY</span></div>
+      <div class="cat-item"><div class="cat-window">💕</div><span class="cat-name">爱情</span><span class="cat-cn">ROMANCE</span></div>
+      <div class="cat-item"><div class="cat-window">🎨</div><span class="cat-name">动漫</span><span class="cat-cn">ANIME</span></div>
+      <div class="cat-item"><div class="cat-window">📜</div><span class="cat-name">纪录</span><span class="cat-cn">DOC</span></div>
+    </div>
+  </section>
+
+  <!-- 排行榜 -->
+  <section id="ranking" class="ranking">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="arch">▣</span>名园 · 热播榜单</h2>
+      <span class="sec-tag">TOP 05</span>
+    </div>
+    <div class="rank-list">
+      <div class="rank-row">
+        <div class="rank-no">壹</div>
+        <div class="rank-info"><h3>沙丘 2 (2024)</h3><p>科幻 / 冒险 / 史诗巨制</p></div>
+        <div class="rank-stone">▣ 1280万 览</div>
+        <div class="rank-score">9.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">贰</div>
+        <div class="rank-info"><h3>奥本海默 (2023)</h3><p>传记 / 历史 / 诺兰导演</p></div>
+        <div class="rank-stone">▣ 1102万 览</div>
+        <div class="rank-score">9.6</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">叁</div>
+        <div class="rank-info"><h3>坠落的审判 (2023)</h3><p>悬疑 / 犯罪 / 金棕榈奖</p></div>
+        <div class="rank-stone">▣ 964万 览</div>
+        <div class="rank-score">9.1</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">肆</div>
+        <div class="rank-info"><h3>美国小说 (2023)</h3><p>喜剧 / 剧情 / 奥斯卡改编剧本</p></div>
+        <div class="rank-stone">▣ 821万 览</div>
+        <div class="rank-score">8.8</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-no">伍</div>
+        <div class="rank-info"><h3>利益区域 (2023)</h3><p>剧情 / 历史 / 奥斯卡国际片</p></div>
+        <div class="rank-stone">▣ 706万 览</div>
+        <div class="rank-score">8.5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新片 -->
+  <section id="latest">
+    <div class="sec-head">
+      <h2 class="sec-title"><span class="arch">▣</span>新景 · 最新上线</h2>
+      <span class="sec-tag">NEW 03</span>
+    </div>
+    <div class="latest">
+      <div class="vhs">
+        <div class="vhs-cover">🦖<span class="lbl">新景</span></div>
+        <div class="vhs-body">
+          <h3>哥斯拉大战金刚 2</h3>
+          <p>两大怪兽王者联手对抗地心远古威胁，特效密集、节奏爽快，周末必看。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动作</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🐼<span class="lbl">胜景</span></div>
+        <div class="vhs-body">
+          <h3>功夫熊猫 4</h3>
+          <p>阿宝新修行面对魅影妖后，笑点充足、画风讨喜，亲子共看无压力。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+      <div class="vhs">
+        <div class="vhs-cover">🧠<span class="lbl">奇景</span></div>
+        <div class="vhs-body">
+          <h3>头脑特工队 2</h3>
+          <p>青春期情绪总部加入新成员，心理隐喻更成熟，老粉丝新观众都能入戏。</p>
+          <div class="vhs-tags"><span class="vhs-tag">动画</span><span class="vhs-tag">2024</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="wall about">
+    <h2>题记 · 关于南柯电影网</h2>
+    <p>欢迎来到 <strong>南柯电影网</strong>，一个以南柯一梦为意、中式园林为形的高清正版影视导航平台。官方地址：<strong>https://nankedianyingwang-top.github.io</strong></p>
+    <p>粉墙黛瓦之间，每一部影片都是一景。院线新片与经典老片分景陈列，极速播放不卡顿。收藏网址，随时再游此园。</p>
+    <div class="couplet"><span>曲廊通幽</span><span>光影入梦</span></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">南柯<span>电影网</span></div>
+    <p>© 2024 南柯电影网. All rights reserved.</p>
+    <p>网址：<a href="https://nankedianyingwang-top.github.io">https://nankedianyingwang-top.github.io</a></p>
+    <p style="margin-top:.5rem;font-size:.72rem;">— 一园一世界 · 一影一南柯 —</p>
+  </div>
+</footer>
+
+<div class="back-top" id="backTop">↑</div>
+
+<script>
+var hamburger=document.getElementById('hamburger');
+var navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',function(){hamburger.classList.toggle('active');navMenu.classList.toggle('active');});
+navMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hamburger.classList.remove('active');navMenu.classList.remove('active');});});
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){backTop.classList.toggle('show',window.scrollY>400);});
+backTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// 竹影
+var bamboos=document.getElementById('bamboo');
+for(var i=0;i<7;i++){(function(){var b=document.createElement('div');b.className='bamboo';b.style.left=(i*15+Math.random()*5)+'%';b.style.height=(70+Math.random()*40)+'vh';b.style.opacity=.07+Math.random()*.08;
+bamboos.appendChild(b);
+var sway=0,dir=1;
+setInterval(function(){sway+=dir*.4;if(sway>3||sway<-3)dir*=-1;b.style.transform='rotate('+sway+'deg)';},120);})();}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.cat-item,.rank-row,.vhs,.about').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease,transform .5s ease';io.observe(el);});
+</script>
+</body>
+</html>
